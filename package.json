@@ -1,0 +1,31 @@
+{
+  "name": "mwd-npm-workflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.9.0",
+    "jasmine": "^2.4.1",
+    "jasmine-core": "^2.4.1",
+    "jshint": "^2.9.1",
+    "karma": "^0.13.21",
+    "karma-cli": "^0.1.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "live-reload": "^1.1.0",
+    "opener": "^1.4.1",
+    "phantomjs": "^2.1.3",
+    "phantomjs-prebuilt": "^2.1.4"
+  },
+  "scripts": {
+    "livereload": "live-reload --port 9091 app/",
+    "preserver": "npm run lint",
+    "server": "http-server ./app -o -a localhost",
+    "start": "npm run livereload | npm run server",
+    "lint": "jshint ./app/scripts/*.js ./tests/*.spec.js",
+    "pretest": "npm run lint",
+    "test": "karma start"
+  },
+  "author": ""
+}
